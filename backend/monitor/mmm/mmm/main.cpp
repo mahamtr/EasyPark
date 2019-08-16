@@ -7,7 +7,6 @@ using namespace std;
 
 char output[1];
 char port[] = "\\\\.\\COM3";
-int x;
 
 int main() {
 	SerialPort arduino(port);
@@ -17,23 +16,40 @@ int main() {
 	else {
 		cout << "Error in port name" << endl << endl;
 	}
-
 	ofstream myfile;
 	myfile.open("variables.txt");
-	if (myfile.is_open()) {
-		myfile << "12341234" ;
-	}
-
-
+	int x = 200;
+	myfile << x;
+	myfile.close();
+	
 	while (arduino.isConnected()) {
 		output[0] = NULL;
+		
+
+	
 
 		arduino.readSerialPort(output,1);
-		if (output[0] == 'y') {
+		if (output[0] == 'i' ) {
+			ofstream myfile;
+			myfile.open("variables.txt");
 			x++;
-			cout << x;
+			cout << x <<endl;
+			myfile << x;
+			myfile.close();
+		}
+
+		if (output[0] == 'o') {
+			ofstream myfile;
+			myfile.open("variables.txt");
+			x=x -1;
+			cout << x <<endl;
+			myfile << x;
+			myfile.close();
 		}
 		
+
+		
+
 	}
 	return 0;
 }
