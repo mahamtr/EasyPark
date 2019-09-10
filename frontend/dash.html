@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="./resources/css/materialize.min.css"  media="screen,projection"/>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<script
+	  src="http://code.jquery.com/jquery-3.4.1.min.js"
+	  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	  crossorigin="anonymous"></script>
+		<title>dash</title>
+
+	<style media="screen">
+		body{
+			text-align: center;
+		}
+       .tabs .tab a{
+            color:#000000;
+        } /*Black color to the text*/
+
+	.tabs .tab a:hover {
+  color:#128C7E;
+  /*Custom Color On Hover*/
+}
+
+.tabs .tab a:focus.active {
+  color:#00000;
+  /*Custom Text Color While Active*/
+  background-color: rgba(0,0,0,0.1);
+  /*Custom Background Color While Active*/
+}
+        .tabs .tab a.active {
+            color:black;
+        } /*Background and text color when a tab is active*/
+
+        .tabs .indicator {
+            background-color:#128C7E;
+        } /*Color of underline*/
+
+				.tabs-content {
+				 height: 600px;
+			 }
+
+			 .tabs-content {
+ .carousel-item {
+	 height: auto;
+ }
+}
+
+          .gauge {
+    width: 250px;
+    height: 250px;
+    display: inline-block;
+  }
+  b{
+  	color: #000000;
+  	font-weight: bold;
+  	margin: 5px;
+
+  }
+nav{
+  	background-color: #075E54;
+  }
+
+span.badge.new{
+  	background-color: #128C7E;
+  }
+
+  span{
+  	vertical-align: middle;
+
+  	  }
+  	    p{
+  	text-align: center;
+  }
+
+  #gg1, #gg2, #gg3, #gg4 {
+        width:130px; height:100px;
+        display: inline-block;
+        margin: 1em;
+      }
+
+
+
+
+	</style>
+	</head>
+<body>
+
+	  <nav id="navbar1 "class="nav-extended ">
+	    <div class="nav-wrapper container-fluid">
+	      <a  class="brand-logo"><h4>Parqueo</h4></a>
+	      <a href="#" data-target="mobile-demo" class="sidenav-trigger "><i class="material-icons">menu</i></a>
+	      <ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="http://www.ceutec.hn/carreras/presencial/informatica/">CEUTEC</a></li>
+	        <li><a >MH&AG</a></li>
+	        <li><a href="https://github.com/mahamtr">JavaScript</a></li>
+	      </ul>
+	    </div>
+
+	    <div class="nav-content container">
+	      <ul class="tabs tabs-transparent">
+	        <li class="tab"><a class="active"href="#test1">CEUTEC SAP<span data-badge-caption="" class="new badge "><b style="font-size: 15px;" class="white-text" id="CNtotald">99</b></span></a></li>
+	        <li class="tab"><a  href="#test2">CEUTEC Sede Norte<span data-badge-caption="" class="new badge "><b style="font-size: 15px;" class="white-text" id="SNtotald">50</b></span></a></li>
+	        <li class="tab"><a href="#test4">UNITEC</a></li>
+	      </ul>
+	    </div>
+	  </nav>
+
+	  <ul class="sidenav" id="mobile-demo">
+			<li><a href="http://www.ceutec.hn/carreras/presencial/informatica/">CEUTEC</a></li>
+			<li><a >MH&AG</a></li>
+			<li><a href="https://github.com/mahamtr">JavaScript</a></li>
+			<li><a href="https://api.whatsapp.com/send?phone=14155238886&text=join%20fall-doctor" target="_blank" ><i class="material-icons">notifications_active</i>Notificarme por WhatsApp</a></li>
+
+	  </ul>
+
+	  <div id="test1" class="col s12">
+			<div class="row">
+    <div class="col s10 offset-s1 ">
+			<div class="card">
+			  <div class="card-content">
+					<span class="card-title heading"><h4>CEUTEC SAP</h4></span>
+
+			    <p><b style="font-size:25px;"id="CNtotal">99</b>/100 </P>
+						<video width="100%" height="100%" autoplay muted loop autobuffer >
+  					<source src="./resources/VID.mp4" type="video/mp4"></source>
+							Your browser does not support the video tag.
+						</video>
+
+
+
+			  </div>
+				<ul class="collapsible popout">
+			    <li>
+			      <div class="collapsible-header"><i class="material-icons">add_circle</i>Niveles</div>
+			      <div class="collapsible-body">
+							<div class="collection">
+						     <a href="#!" class="collection-item"><span class="badge"><b id="niv1">25</b>/25</span>Nivel 1</a>
+								 <a href="#!" class="collection-item"><span class="badge"><b id="niv2">25</b>/25</span>Nivel 2</a>
+								 <a href="#!" class="collection-item"><span class="badge"><b id="niv3">25</b>/25</span>Nivel 3</a>
+								 <a href="#!" class="collection-item"><span class="badge"><b id="niv4">25</b>/25</span>Nivel 4</a>
+								 <a href="#!" class="collection-item"><span class="badge">NA</span>Nivel 5  </a>
+						   </div>
+
+						</div>
+			    </li>
+			  </ul>
+				<div class="row">
+
+				</div>
+
+			</div>
+		</div></div>
+		<div class="">
+			<div class="col s12 ">
+   	<div id="gg1"></div>
+   	<div id="gg2"></div>
+</div></div>
+	</div>
+
+
+	  <div id="test2" class="col s12">
+			<div class="row">
+    <div class="col s10 offset-s1 ">
+      <div class="card">
+        <div class="card-content black-text">
+          <span class="card-title heading" ><h4>Parqueo Sede Norte</h4></span>
+          <p><b style="font-size:20px;" id="SNtotal" >38</b>/55</p>
+
+        </div>
+
+        <div class="card-action">
+          <a href="https://api.whatsapp.com/send?phone=14155238886&text=join%20fall-doctor" target="_blank"><i class="material-icons">notifications_active</i>Notificarme por WhatsApp</a></a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+<div class="">
+	<div class="col s12  ">
+   	<div id="gg3"></div>
+   	<div id="gg4"></div>
+</div></div>
+	</div>
+
+	  <div id="test4" class="col s12">
+			<div class="row">
+    <div class="col s8 offset-s2 ">
+      <div class="card blue-grey darken-1 z-depth-4">
+        <div class="card-content white-text">
+          <span class="card-title heading"><h4>Parqueo UNITEC</h4></span>
+          <p>Implementacion en proceso</p>
+        </div>
+        <div class="card-action">
+					<div class="progress">
+      <div class="indeterminate"></div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+		</div></div>
+
+
+  <script src="./resources/js/raphael-2.1.4.min.js"></script>
+	<script src="./resources/js/justgage.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+        var gg1 = new JustGage({
+            id: "gg1",
+            value: 0,
+            min: 0,
+            max: 100,
+            title: "Flujo de entrada",
+            textRenderer: customValue
+        });
+          var gg2 = new JustGage({
+            id: "gg2",
+            value: 0,
+            min: 0,
+            max: 100,
+            title: "Flujo de salida",
+            textRenderer: customValue
+        });
+          var gg3 = new JustGage({
+            id: "gg3",
+            value: 0,
+            min: 0,
+            max: 100,
+            title: "Flujo de entrada",
+            textRenderer: customValue
+        });
+		var gg4 = new JustGage({
+            id: "gg4",
+            value: 0,
+            min: 0,
+            max: 100,
+            title: "Flujo de Salida",
+            textRenderer: customValue
+        });
+
+	function inreader1() {
+			 function loadFile(filePath) {
+  			 var result = null;
+  			 var xmlhttp = new XMLHttpRequest();
+  			 xmlhttp.open("GET",filePath, false);
+  			 xmlhttp.send();
+  			 if (xmlhttp.status==200) {
+   			  result = xmlhttp.responseText;
+  			 }
+  			 return result;
+ 		}
+  		var myStuff = loadFile("/resources/var/ingauge1.txt");
+  		return myStuff;
+		}
+
+ function inreader2() {
+                         function loadFile(filePath) {
+                         var result = null;
+                         var xmlhttp = new XMLHttpRequest();
+                         xmlhttp.open("GET",filePath, false);
+                         xmlhttp.send();
+                         if (xmlhttp.status==200) {
+                          result = xmlhttp.responseText;
+                         }
+                         return result;
+                }
+                var myStuff = loadFile("/resources/var/outgauge1.txt");
+                return myStuff;
+                }
+
+ function inreader3() {
+                         function loadFile(filePath) {
+                         var result = null;
+                         var xmlhttp = new XMLHttpRequest();
+                         xmlhttp.open("GET",filePath, false);
+                         xmlhttp.send();
+                         if (xmlhttp.status==200) {
+                          result = xmlhttp.responseText;
+                         }
+                         return result;
+                }
+                var myStuff = loadFile("/resources/var/ingauge2.txt");
+                return myStuff;
+                }
+ function inreader4() {
+                         function loadFile(filePath) {
+                         var result = null;
+                         var xmlhttp = new XMLHttpRequest();
+                         xmlhttp.open("GET",filePath, false);
+                         xmlhttp.send();
+                         if (xmlhttp.status==200) {
+                          result = xmlhttp.responseText;
+                         }
+                         return result;
+                }
+                var myStuff = loadFile("/resources/var/outgauge2.txt");
+                return myStuff;
+                }
+
+
+
+
+
+       setInterval(function() {
+          gg1.refresh(inreader1());
+          gg2.refresh(inreader2());
+	gg3.refresh(inreader3());
+gg4.refresh(inreader4());
+
+
+if(gg1.config.value <= 33){
+	console.log("low");
+	this.document.querySelector('video').playbackRate = 0.5;
+}
+if(gg1.config.value > 33 && gg1.config.value <=66){
+	console.log("mid");
+		this.document.querySelector('video').playbackRate = 1;
+}
+if(gg1.config.value > 66){
+	console.log("high");
+	this.document.querySelector('video').playbackRate = 3;
+
+}
+
+
+
+
+
+        }, 2500);
+
+
+        function customValue(val) {
+		if(val <= 33){
+		return "Bajo";
+		}
+		if(val > 33 && val <= 66){
+                return "Medio";
+                }
+		if(val >66){
+                return "Alto";
+                }
+
+        }
+    });
+  </script>
+
+<script type="text/javascript" src="./resources/js/materialize.min.js"></script>
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	 $('.sidenav').sidenav();
+ });
+
+   $(document).ready(function(){
+     $('.collapsible').collapsible();
+   });
+
+    $('.tabs').tabs({
+		swipeable : false,
+		responsiveThreshold : 1920,
+});
+</script>
+
+
+</body>
+</html>

@@ -1,69 +1,78 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link type="text/css" rel="stylesheet" href="./resources/css/materialize.min.css"  media="screen,projection"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<script
-	  src="http://code.jquery.com/jquery-3.4.1.min.js"
-	  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-	  crossorigin="anonymous"></script>
-	</head>
+    <head>
+
+       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link rel="stylesheet" href="./resources/css/login.css" >
+        <style media="screen">
+        #banner {
+          background-color: #075e54;
+
+        }
+        h3{
+          color: #dcf8c6;
+        }
+        #login{
+          background-color: #25d366;
+        }
+        </style>
+    </head>
+
+
 <body>
 
-<nav class="brown">
-	<div class="nav-wrapper container">
-		<a href="" class="brand-logo">Sistema de Parqueo Ceutec</a>
-		<ul class="right hide-on-med-and-down">
-			<li><a>Programacion #3</a> </li>
-			<li><a href="http://www.ceutec.hn/">CEUTEC</a></li>
-		</ul>
-	</div>
-</nav>
+<div class="container">
 
-<div class="section"></div>
+  <div class="row">
+      <form name="form" action="dash.html" >
+        <div class="row">
+
+            <div class="col s12 m6 offset-m3">
+                  <div class="card center-align mg ">
+
+                      <div class="card-content ">
+                          <span class="card-title"><div id="banner"><h3>Login</h3></div></span>
+                          <div class="input-field">
+                              <input id="email" type="text" >
+                              <label for="email">Email</label>
+                          </div>
+                          <div class="input-field" >
+                              <input id="password" type="password">
+                              <label for="password">Password</label>
+
+                          </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+            </div>
+
+
+      </form>
+
+
+  </div>
+</div>
 <div class="row ">
-	<div class="col s4 offset-s4">
-		<div class="row">
-			<div class="input-field col12 ">
-				<select >
-					<option value="1" selected>CEUTEC</option>
-					<option value="2">CEUTEC Anexo</option>
-					<option value="3" disabled=true>UNITEC</option>
-				</select>
-				<label for="">Seleccione un parqueo</label>
-			</div>
-		</div>
-	</div>
+        <button id="login" class="btn pulse waves-effect waves-light col s4 offset-s4" onclick="login()">Ingresar</button>
 </div>
 
-
-
-
-<div class="row ">
-	 <div class="col s6 offset-s3 ">
-		 <div class="card medium z-depth-4">
-			 <div class="card-image ">
-				 <img src="./resources/parqueo.jpg">
-				 <span class="card-title" >Parqueos Disponibles</span>
-			 </div>
-			 <div class="card-content">
-				 <h2><b id="Disponibles"></b> disponibles</h2>
-			 </div>
-			 <div class="card-action">
-			 </div>
-		 </div>
-	 </div>
- </div>
-
-
-<script type="text/javascript" src="./resources/js/materialize.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-$('select').formSelect();
-});
-
+ <script  language=JavaScript>
+    function login(){
+      if(document.form.email.value=='admin' && document.form.password.value=='admin'){
+        location="dash.html"
+    }
+    else{
+         alert("bad credentials");
+    }
+}
 </script>
 
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
